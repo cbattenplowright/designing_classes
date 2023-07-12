@@ -14,12 +14,12 @@ public class Runner {
         Rectangle rectangle = new Rectangle(12, 12);
 
         // 2. Calculate the rectangle's area and store it in a variable
-        int area = rectangle.area();
+        int area = rectangle.calculateArea();
         System.out.println("The rectangle has an area of " + area);
 
         // 3. Check if your rectangle is actually a square
-        boolean isRectangle = rectangle.isRectangle();
-        System.out.println("Object is a square (true/false): " + isRectangle);
+        boolean isSquare = rectangle.isSquare();
+        System.out.println("Object is a square (true/false): " + isSquare);
     }
 
     public static void computerDemo(){
@@ -55,18 +55,18 @@ public class Runner {
         System.out.println("Running shopping trolley tasks...");
 
         // 1. Create a new shopping trolley
-//        ShoppingTrolley trolley = <INSTANTIATE A NEW SHOPPINGTROLLEY OBJECT HERE>;
+        ShoppingTrolley trolley = new ShoppingTrolley();
 
         // 2. Add an item to the trolley
-//        <CALL YOUR METHOD HERE>;
+        trolley.addItem("Banana");
 
         // 3. Count items in the trolley
-//        int itemCount = <CALL YOUR METHOD HERE>;
-//        System.out.println("The trolley contains " + itemCount + " items.");
+        int itemCount = trolley.countItemsInTrolley();
+        System.out.println("The trolley contains " + itemCount + " items.");
 
         // 4. Check if an item is in the trolley
-//        boolean itemInTrolley = <CALL YOUR METHOD HERE>;
-//        System.out.println("Object is a square (true/false): " + itemInTrolley);
+        boolean itemInTrolley = trolley.isItemInTrolley("Banana");
+        System.out.println("Object is a square (true/false): " + itemInTrolley);
     }
 
 

@@ -8,11 +8,11 @@ public class Rectangle {
         this.width = width;
     }
 
-    public int area() {
-        return length * width;
+    public int calculateArea() {
+        return this.length * this.width;
     }
 
-    public boolean isRectangle() {
-        return length == width;
+    public boolean isSquare() {
+        return this.length == this.width;
     }
 }

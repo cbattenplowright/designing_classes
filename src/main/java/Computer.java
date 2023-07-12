@@ -2,6 +2,7 @@ public class Computer {
 
     private int currentStorage;
     private String printerModel;
+    private boolean printerConnected;
 
     public Computer(int storage) {
         this.currentStorage = storage;
@@ -9,23 +10,26 @@ public class Computer {
     }
 
     public int getStorage() {
-        return currentStorage;
+        return this.currentStorage;
     }
 
     public String getPrinterModel() {
-        return printerModel;
+        return this.printerModel;
     }
 
     public void setPrinterModel(String printerModel) {
         this.printerModel = printerModel;
+        this.printerConnected = true;
     }
 
     public void addStorage(int additionalStorage) {
-        currentStorage += additionalStorage;
+        this.currentStorage += additionalStorage;
     }
 
     public void printMessage(String message) {
-        System.out.println(message);
+        if (this.printerConnected) {
+            System.out.println(message);
+        }
     }
 
 }
